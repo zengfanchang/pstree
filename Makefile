@@ -6,7 +6,6 @@ gdb_args := -q
 cmd_gdb := ./pstree.gdb
 input_args := -p --show-pids --version
 
-include ../Makefile
 
 test: pstree.c
 	gcc pstree.c -o pstree-test
@@ -18,4 +17,4 @@ debugger: pstree.c
 	
 .PHONY: clean ALL
 clean:
-	rm -rf ./pstree-test
+	rm -rf ./pstree-test ./pstree-debug
