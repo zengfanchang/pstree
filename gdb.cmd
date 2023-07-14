@@ -1,0 +1,1 @@
+call printf("%c\n", opt)

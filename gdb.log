@@ -1,0 +1,238 @@
+
+Program received signal SIGSEGV, Segmentation fault.
+0x000055555555540c in insert (head=0x5555557600d0, temp=0x555555760710, flag=0) at pstree.c:155
+$1 = (Lnode *) 0x5555557600d0
+$2 = {pid = 4, ppid = 2, name = "kworker/0:0H(4)", '\000' <repeats 16 times>, next = 0x555555760260, pre = 0x0, child = 0x0}
+[Inferior 1 (process 3371) exited normally]
+[Inferior 1 (process 10007) exited normally]
+Breakpoint 1 at 0x16ec: file pstree.c, line 221.
+Temporary breakpoint 2 at 0x17f5: file pstree.c, line 241.
+
+Temporary breakpoint 2, main (argc=2, argv=0x7fffffffe078) at pstree.c:241
+
+Breakpoint 1, create_tree (flags=0x7fffffffdf30) at pstree.c:221
+$1 = {pid = 0, ppid = 0, name = "?()", '\000' <repeats 28 times>, next = 0x0, pre = 0x0, child = 0x0}
+$2 = (Tnode *) 0x7fffffffdf40
+$3 = (Tnode *) 0x7fffffffdf40
+$4 = (Tnode *) 0x7fffffffdf40
+$5 = (Tnode *) 0x7fffffffdf40
+$6 = (Tnode *) 0x7fffffffdf40
+$7 = (Tnode *) 0x7fffffffdf40
+$8 = {pid = 0, ppid = 0, name = "?()", '\000' <repeats 28 times>, next = 0x0, pre = 0x0, child = 0x0}
+No symbol "o" in current context.
+$9 = {pid = 1, ppid = 0, name = "systemd", '\000' <repeats 24 times>, next = 0x55555575f2f0, pre = 0x555555757040 <head>, child = 0x0}
+Stack level 0, frame at 0x7fffffffdec0:
+ rip = 0x5555555556f9 in create_tree (pstree.c:222); saved rip = 0x55555555594f
+ called by frame at 0x7fffffffdfa0
+ source language c.
+ Arglist at 0x7fffffffdeb0, args: flags=0x7fffffffdf30
+ Locals at 0x7fffffffdeb0, Previous frame's sp is 0x7fffffffdec0
+ Saved registers:
+  rbp at 0x7fffffffdeb0, rip at 0x7fffffffdeb8
+temp = 0x555555760c40
+p = 0x5555557587c0
+1: p = (Tnode *) 0x5555557587c0
+1: p = (Tnode *) 0x5555557587c0
+1: p = (Tnode *) 0x5555557587c0
+1: p = (Tnode *) 0x5555557587c0
+Undefined command: "dispaly".  Try "help".
+2: *p = {pid = 1, ppid = 0, name = "systemd(1)", '\000' <repeats 21 times>, next = 0x55555575f2f0, pre = 0x555555757040 <head>, child = 0x0}
+1: p = (Tnode *) 0x5555557587c0
+2: *p = {pid = 1, ppid = 0, name = "systemd(1)", '\000' <repeats 21 times>, next = 0x0, pre = 0x0, child = 0x0}
+warning: bad display number at or near '*p p'
+warning: bad display number at or near 'p'
+1: p = (Tnode *) 0x55555575f2f0
+2: *p = {pid = 2, ppid = 0, name = "kthreadd", '\000' <repeats 23 times>, next = 0x55555575fca0, pre = 0x0, child = 0x0}
+warning: bad display number at or near 'p'
+211	in /home/zeng/os-workbench/pstree/pstree.c
+Breakpoint 1 at 0x1705: file pstree.c, line 223.
+Temporary breakpoint 2 at 0x17f5: file pstree.c, line 241.
+
+Temporary breakpoint 2, main (argc=2, argv=0x7fffffffe078) at pstree.c:241
+
+Breakpoint 1, create_tree (flags=0x7fffffffdf30) at pstree.c:223
+1: *root = {pid = 0, ppid = 0, name = "?()", '\000' <repeats 28 times>, next = 0x0, pre = 0x0, child = 0x0}
+2: *p = {pid = 1, ppid = 0, name = "systemd", '\000' <repeats 24 times>, next = 0x55555575f390, pre = 0x555555757040 <head>, child = 0x0}
+3: *temp = {pid = 2, ppid = 0, name = "kthreadd", '\000' <repeats 23 times>, next = 0x55555575fd40, pre = 0x5555557587c0, child = 0x0}
+1: *root = {pid = 0, ppid = 0, name = "?()", '\000' <repeats 28 times>, next = 0x0, pre = 0x0, child = 0x0}
+2: *p = {pid = 1, ppid = 0, name = "systemd(1)", '\000' <repeats 21 times>, next = 0x55555575f390, pre = 0x555555757040 <head>, child = 0x0}
+3: *temp = {pid = 2, ppid = 0, name = "kthreadd", '\000' <repeats 23 times>, next = 0x55555575fd40, pre = 0x5555557587c0, child = 0x0}
+1: *root = {pid = 0, ppid = 0, name = "?()", '\000' <repeats 28 times>, next = 0x0, pre = 0x0, child = 0x5555557587c0}
+2: *p = {pid = 1, ppid = 0, name = "systemd(1)", '\000' <repeats 21 times>, next = 0x0, pre = 0x0, child = 0x0}
+3: *temp = {pid = 2, ppid = 0, name = "kthreadd", '\000' <repeats 23 times>, next = 0x55555575fd40, pre = 0x0, child = 0x0}
+4: p = (Tnode *) 0x5555557587c0
+1: *root = {pid = 0, ppid = 0, name = "?()", '\000' <repeats 28 times>, next = 0x0, pre = 0x0, child = 0x5555557587c0}
+2: *p = {pid = 2, ppid = 0, name = "kthreadd", '\000' <repeats 23 times>, next = 0x55555575fd40, pre = 0x0, child = 0x0}
+4: p = (Tnode *) 0x55555575f390
+Continuing.
+
+Breakpoint 1, create_tree (flags=0x7fffffffdf30) at pstree.c:223
+1: *root = {pid = 0, ppid = 0, name = "?()", '\000' <repeats 28 times>, next = 0x0, pre = 0x0, child = 0x5555557587c0}
+2: *p = {pid = 2, ppid = 0, name = "kthreadd", '\000' <repeats 23 times>, next = 0x55555575fd40, pre = 0x0, child = 0x0}
+3: *temp = {pid = 4, ppid = 2, name = "kworker/0:0H", '\000' <repeats 19 times>, next = 0x55555575fed0, pre = 0x55555575f390, child = 0x0}
+4: p = (Tnode *) 0x55555575f390
+Breakpoint 3 at 0x55555555573c: file pstree.c, line 225.
+Continuing.
+
+Breakpoint 3, create_tree (flags=0x7fffffffdf30) at pstree.c:225
+1: *root = {pid = 0, ppid = 0, name = "?()", '\000' <repeats 28 times>, next = 0x0, pre = 0x0, child = 0x5555557587c0}
+2: *p = {pid = 2, ppid = 0, name = "kthreadd(2)", '\000' <repeats 20 times>, next = 0x55555575fd40, pre = 0x0, child = 0x0}
+3: *temp = {pid = 4, ppid = 2, name = "kworker/0:0H", '\000' <repeats 19 times>, next = 0x55555575fed0, pre = 0x55555575f390, child = 0x0}
+4: p = (Tnode *) 0x55555575f390
+Breakpoint 1 at 0x173c: file pstree.c, line 225.
+Temporary breakpoint 2 at 0x17f5: file pstree.c, line 241.
+
+Temporary breakpoint 2, main (argc=2, argv=0x7fffffffe078) at pstree.c:241
+
+Breakpoint 1, create_tree (flags=0x7fffffffdf30) at pstree.c:225
+create_Tnode (root=0x7fffffffdf40, head=0x5555557587c0, flag=1) at pstree.c:190
+1: *root = {pid = 0, ppid = 0, name = "?()", '\000' <repeats 28 times>, next = 0x0, pre = 0x0, child = 0x0}
+2: root = (Tnode *) 0x7fffffffdf40
+1: *root = {pid = 0, ppid = 0, name = "?()", '\000' <repeats 28 times>, next = 0x0, pre = 0x0, child = 0x0}
+2: root = (Tnode *) 0x7fffffffdf40
+7: *head = {pid = 1, ppid = 0, name = "systemd(1)", '\000' <repeats 21 times>, next = 0x55555575f390, pre = 0x555555757040 <head>, child = 0x0}
+8: flag = 1
+Breakpoint 1 at 0x173c: file pstree.c, line 225.
+Temporary breakpoint 2 at 0x17f5: file pstree.c, line 241.
+
+Temporary breakpoint 2, main (argc=2, argv=0x7fffffffe078) at pstree.c:241
+
+Breakpoint 1, create_tree (flags=0x7fffffffdf30) at pstree.c:225
+./pstree.gdb:14: Error in sourced command file:
+No symbol "flag" in current context.
+create_Tnode (root=0x7fffffffdf40, head=0x5555557587c0, flag=0) at pstree.c:190
+1: *root = {pid = 0, ppid = 0, name = "?()", '\000' <repeats 28 times>, next = 0x0, pre = 0x0, child = 0x0}
+2: root = (Tnode *) 0x7fffffffdf40
+7: *head = <error: Structure has no component named operator*.>
+1: *root = {pid = 0, ppid = 0, name = "?()", '\000' <repeats 28 times>, next = 0x0, pre = 0x0, child = 0x0}
+2: root = (Tnode *) 0x7fffffffdf40
+7: *head = <error: Structure has no component named operator*.>
+$1 = {pid = 1, ppid = 0, name = "systemd(1)", '\000' <repeats 21 times>, next = 0x55555575f3b0, pre = 0x555555757040 <head>, child = 0x0}
+9: *head = {pid = 1, ppid = 0, name = "systemd(1)", '\000' <repeats 21 times>, next = 0x55555575f3b0, pre = 0x555555757040 <head>, child = 0x0}
+1: *root = {pid = 0, ppid = 0, name = "?()", '\000' <repeats 28 times>, next = 0x0, pre = 0x0, child = 0x0}
+2: root = (Tnode *) 0x7fffffffdf40
+7: *head = <error: Structure has no component named operator*.>
+9: *head = {pid = 1, ppid = 0, name = "systemd(1)", '\000' <repeats 21 times>, next = 0x55555575f3b0, pre = 0x555555757040 <head>, child = 0x0}
+1: *root = {pid = 0, ppid = 0, name = "?()", '\000' <repeats 28 times>, next = 0x0, pre = 0x0, child = 0x0}
+2: root = (Tnode *) 0x7fffffffdf40
+7: *head = <error: Structure has no component named operator*.>
+9: *head = {pid = 1, ppid = 0, name = "systemd(1)", '\000' <repeats 21 times>, next = 0x55555575f3b0, pre = 0x555555757040 <head>, child = 0x0}
+1: *root = {pid = 0, ppid = 0, name = "?()", '\000' <repeats 28 times>, next = 0x0, pre = 0x0, child = 0x5555557587c0}
+2: root = (Tnode *) 0x7fffffffdf40
+7: *head = <error: Structure has no component named operator*.>
+9: *head = {pid = 1, ppid = 0, name = "systemd(1)", '\000' <repeats 21 times>, next = 0x55555575f3b0, pre = 0x555555757040 <head>, child = 0x0}
+1: *root = {pid = 0, ppid = 0, name = "?()", '\000' <repeats 28 times>, next = 0x0, pre = 0x0, child = 0x5555557587c0}
+2: root = (Tnode *) 0x7fffffffdf40
+7: *head = <error: Structure has no component named operator*.>
+9: *head = {pid = 1, ppid = 0, name = "systemd(1)", '\000' <repeats 21 times>, next = 0x55555575f3b0, pre = 0x0, child = 0x0}
+1: *root = {pid = 0, ppid = 0, name = "?()", '\000' <repeats 28 times>, next = 0x0, pre = 0x0, child = 0x5555557587c0}
+2: root = (Tnode *) 0x7fffffffdf40
+7: *head = <error: Structure has no component named operator*.>
+9: *head = {pid = 1, ppid = 0, name = "systemd(1)", '\000' <repeats 21 times>, next = 0x55555575f3b0, pre = 0x0, child = 0x0}
+1: *root = {pid = 0, ppid = 0, name = "?()", '\000' <repeats 28 times>, next = 0x0, pre = 0x0, child = 0x5555557587c0}
+2: root = (Tnode *) 0x7fffffffdf40
+7: *head = <error: Structure has no component named operator*.>
+9: *head = {pid = 1, ppid = 0, name = "systemd(1)", '\000' <repeats 21 times>, next = 0x55555575f3b0, pre = 0x0, child = 0x0}
+1: *root = {pid = 0, ppid = 0, name = "?()", '\000' <repeats 28 times>, next = 0x0, pre = 0x0, child = 0x5555557587c0}
+2: root = (Tnode *) 0x7fffffffdf40
+7: *head = <error: Structure has no component named operator*.>
+9: *head = {pid = 1, ppid = 0, name = "systemd(1)", '\000' <repeats 21 times>, next = 0x0, pre = 0x0, child = 0x0}
+create_Tnode (root=0x0, head=0x5555557587c0, flag=0) at pstree.c:190
+1: *root = {pid = 0, ppid = 0, name = "?()", '\000' <repeats 28 times>, next = 0x0, pre = 0x0, child = 0x5555557587c0}
+2: root = (Tnode *) 0x7fffffffdf40
+7: *head = <error: Structure has no component named operator*.>
+9: *head = {pid = 1, ppid = 0, name = "systemd(1)", '\000' <repeats 21 times>, next = 0x0, pre = 0x0, child = 0x0}
+1: *root = {pid = 0, ppid = 0, name = "?()", '\000' <repeats 28 times>, next = 0x0, pre = 0x0, child = 0x5555557587c0}
+2: root = (Tnode *) 0x7fffffffdf40
+7: *head = <error: Structure has no component named operator*.>
+9: *head = {pid = 1, ppid = 0, name = "systemd(1)", '\000' <repeats 21 times>, next = 0x0, pre = 0x0, child = 0x0}
+create_Tnode (root=0x7fffffffdf40, head=0x5555557587c0, flag=0) at pstree.c:217
+1: *root = {pid = 0, ppid = 0, name = "?()", '\000' <repeats 28 times>, next = 0x0, pre = 0x0, child = 0x5555557587c0}
+2: root = (Tnode *) 0x7fffffffdf40
+7: *head = <error: Structure has no component named operator*.>
+9: *head = {pid = 1, ppid = 0, name = "systemd(1)", '\000' <repeats 21 times>, next = 0x0, pre = 0x0, child = 0x0}
+create_Tnode (root=0x5555557587c0, head=0x5555557587c0, flag=0) at pstree.c:190
+1: *root = {pid = 0, ppid = 0, name = "?()", '\000' <repeats 28 times>, next = 0x0, pre = 0x0, child = 0x5555557587c0}
+2: root = (Tnode *) 0x7fffffffdf40
+7: *head = <error: Structure has no component named operator*.>
+9: *head = {pid = 1, ppid = 0, name = "systemd(1)", '\000' <repeats 21 times>, next = 0x0, pre = 0x0, child = 0x0}
+1: *root = {pid = 0, ppid = 0, name = "?()", '\000' <repeats 28 times>, next = 0x0, pre = 0x0, child = 0x5555557587c0}
+2: root = (Tnode *) 0x7fffffffdf40
+7: *head = <error: Structure has no component named operator*.>
+9: *head = {pid = 1, ppid = 0, name = "systemd(1)", '\000' <repeats 21 times>, next = 0x0, pre = 0x0, child = 0x0}
+1: *root = {pid = 0, ppid = 0, name = "?()", '\000' <repeats 28 times>, next = 0x0, pre = 0x0, child = 0x5555557587c0}
+2: root = (Tnode *) 0x7fffffffdf40
+7: *head = <error: Structure has no component named operator*.>
+9: *head = {pid = 1, ppid = 0, name = "systemd(1)", '\000' <repeats 21 times>, next = 0x0, pre = 0x0, child = 0x0}
+create_Tnode (root=0x0, head=0x5555557587c0, flag=0) at pstree.c:190
+1: *root = {pid = 0, ppid = 0, name = "?()", '\000' <repeats 28 times>, next = 0x0, pre = 0x0, child = 0x5555557587c0}
+2: root = (Tnode *) 0x7fffffffdf40
+7: *head = <error: Structure has no component named operator*.>
+9: *head = {pid = 1, ppid = 0, name = "systemd(1)", '\000' <repeats 21 times>, next = 0x0, pre = 0x0, child = 0x0}
+1: *root = {pid = 0, ppid = 0, name = "?()", '\000' <repeats 28 times>, next = 0x0, pre = 0x0, child = 0x5555557587c0}
+2: root = (Tnode *) 0x7fffffffdf40
+7: *head = <error: Structure has no component named operator*.>
+9: *head = {pid = 1, ppid = 0, name = "systemd(1)", '\000' <repeats 21 times>, next = 0x0, pre = 0x0, child = 0x0}
+create_Tnode (root=0x5555557587c0, head=0x5555557587c0, flag=0) at pstree.c:217
+1: *root = {pid = 0, ppid = 0, name = "?()", '\000' <repeats 28 times>, next = 0x0, pre = 0x0, child = 0x5555557587c0}
+2: root = (Tnode *) 0x7fffffffdf40
+7: *head = <error: Structure has no component named operator*.>
+9: *head = {pid = 1, ppid = 0, name = "systemd(1)", '\000' <repeats 21 times>, next = 0x0, pre = 0x0, child = 0x0}
+create_Tnode (root=0x0, head=0x5555557587c0, flag=0) at pstree.c:190
+1: *root = {pid = 0, ppid = 0, name = "?()", '\000' <repeats 28 times>, next = 0x0, pre = 0x0, child = 0x5555557587c0}
+2: root = (Tnode *) 0x7fffffffdf40
+7: *head = <error: Structure has no component named operator*.>
+9: *head = {pid = 1, ppid = 0, name = "systemd(1)", '\000' <repeats 21 times>, next = 0x0, pre = 0x0, child = 0x0}
+1: *root = {pid = 0, ppid = 0, name = "?()", '\000' <repeats 28 times>, next = 0x0, pre = 0x0, child = 0x5555557587c0}
+2: root = (Tnode *) 0x7fffffffdf40
+7: *head = <error: Structure has no component named operator*.>
+9: *head = {pid = 1, ppid = 0, name = "systemd(1)", '\000' <repeats 21 times>, next = 0x0, pre = 0x0, child = 0x0}
+1: *root = {pid = 0, ppid = 0, name = "?()", '\000' <repeats 28 times>, next = 0x0, pre = 0x0, child = 0x5555557587c0}
+2: root = (Tnode *) 0x7fffffffdf40
+7: *head = <error: Structure has no component named operator*.>
+9: *head = {pid = 1, ppid = 0, name = "systemd(1)", '\000' <repeats 21 times>, next = 0x0, pre = 0x0, child = 0x0}
+1: *root = {pid = 0, ppid = 0, name = "?()", '\000' <repeats 28 times>, next = 0x0, pre = 0x0, child = 0x5555557587c0}
+2: root = (Tnode *) 0x7fffffffdf40
+7: *head = <error: Structure has no component named operator*.>
+9: *head = {pid = 1, ppid = 0, name = "systemd(1)", '\000' <repeats 21 times>, next = 0x0, pre = 0x0, child = 0x0}
+create_tree (flags=0x7fffffffdf30) at pstree.c:226
+1: *root = {pid = 0, ppid = 0, name = "?()", '\000' <repeats 28 times>, next = 0x0, pre = 0x0, child = 0x5555557587c0}
+2: root = (Tnode *) 0x7fffffffdf40
+3: *p = {pid = 1, ppid = 0, name = "systemd(1)", '\000' <repeats 21 times>, next = 0x0, pre = 0x0, child = 0x0}
+4: p = (Tnode *) 0x5555557587c0
+5: *temp = {pid = 2, ppid = 0, name = "kthreadd", '\000' <repeats 23 times>, next = 0x55555575fd60, pre = 0x0, child = 0x0}
+6: temp = (Tnode *) 0x55555575f3b0
+7: *head = <error: Structure has no component named operator*.>
+8: flags = (int *) 0x7fffffffdf30
+$2 = (int *) 0x7fffffffdf30
+$3 = 0
+No symbol "flag" in current context.
+
+Breakpoint 1, create_tree (flags=0x7fffffffdf30) at pstree.c:225
+create_Tnode (root=0x7fffffffdf40, head=0x55555575f3b0, flag=0) at pstree.c:190
+Breakpoint 1 at 0xe06: file pstree.c, line 50.
+Temporary breakpoint 2 at 0x180c: file pstree.c, line 259.
+
+Temporary breakpoint 2, main (argc=4, argv=0x7fffffffe058) at pstree.c:259
+
+Breakpoint 1, deal_args (argc=4, argv=0x7fffffffe058, flags=0x7fffffffdf10) at pstree.c:51
+$1 = -1
+$2 = -1
+$3 = -1
+$4 = -1
+$5 = -1
+$6 = -1
+$7 = -1
+$8 = (int *) 0x7fffffffdf10
+Breakpoint 1 at 0xd7a: file pstree.c, line 43.
+Temporary breakpoint 2 at 0x180c: file pstree.c, line 259.
+
+Temporary breakpoint 2, main (argc=4, argv=0x7fffffffe058) at pstree.c:259
+
+Breakpoint 1, deal_args (argc=4, argv=0x7fffffffe058, flags=0x7fffffffdf10) at pstree.c:43
+$1 = 32767
+./gdb.cmd:1: Error in sourced command file:
+Invalid character ';' in expression.
+$2 = 2
+$3 = 112
+$4 = 2
